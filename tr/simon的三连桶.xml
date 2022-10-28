@@ -1,0 +1,108 @@
+<?xml version="1.0"?>
+<TriggernometryExport Version="1">
+  <ExportedFolder Id="9937df98-6b97-4335-81d8-e3c224e85a5c" Name="simon的三连桶" Enabled="true">
+    <Folders />
+    <Triggers>
+      <Trigger Enabled="true" Name="石牢计时15s后取消标记摧毁变量" Id="57f915d2-8a1a-45d0-a4c0-42269b6af9a1" RegularExpression="^.*?ActionEffect.*?:.{8}:泰坦:(2B6B|2B6C):花岗岩牢狱:.{8}:" PrevActionsRefire="Deny">
+        <Actions>
+          <Action OrderNumber="1" JsonEndpointExpression="http://127.0.0.1:${var:鲶鱼精邮差端口}/command" JsonPayloadExpression="/mk attack1 &lt;attack1&gt;" NamedCallbackName="command" NamedCallbackParam="/mk clear &lt;attack1&gt;" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="NamedCallback" ExecutionDelayExpression="15000" Asynchronous="False">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="2" JsonEndpointExpression="http://127.0.0.1:${var:鲶鱼精邮差端口}/command" JsonPayloadExpression="/mk attack1 &lt;attack1&gt;" NamedCallbackName="command" NamedCallbackParam="/mk clear &lt;attack2&gt;" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="NamedCallback" Asynchronous="False">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="3" JsonEndpointExpression="http://127.0.0.1:${var:鲶鱼精邮差端口}/command" JsonPayloadExpression="/mk attack1 &lt;attack1&gt;" NamedCallbackName="command" NamedCallbackParam="/mk clear &lt;attack3&gt;" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="NamedCallback" Asynchronous="False">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="4" ListVariableName="stone_list" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="ListVariable">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="5" VariableName="stone_list_size" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="6" NamedCallbackName="command" NamedCallbackParam="/e test!" TextAuraFontSize="9" TextAuraFontName="宋体" Enabled="False" ActionType="NamedCallback">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+        </Actions>
+        <Condition Enabled="false" Grouping="Or" />
+      </Trigger>
+      <Trigger Enabled="false" Name="拉哈取消标记销毁变量" Id="b021ebb9-477f-451c-b603-10e28ba1fb97" RegularExpression="^.*?:0044:泰坦:我的……孩子们……终有一日……">
+        <Actions>
+          <Action OrderNumber="1" JsonEndpointExpression="http://127.0.0.1:${var:鲶鱼精邮差端口}/command" JsonPayloadExpression="/mk attack1 &lt;attack1&gt;" NamedCallbackName="command" NamedCallbackParam="/mk attack1 &lt;attack1&gt;" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="NamedCallback" Asynchronous="False">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="2" JsonEndpointExpression="http://127.0.0.1:${var:鲶鱼精邮差端口}/command" JsonPayloadExpression="/mk attack1 &lt;attack1&gt;" NamedCallbackName="command" NamedCallbackParam="/mk attack2 &lt;attack2&gt;" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="NamedCallback" Asynchronous="False">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="3" JsonEndpointExpression="http://127.0.0.1:${var:鲶鱼精邮差端口}/command" JsonPayloadExpression="/mk attack1 &lt;attack1&gt;" NamedCallbackName="command" NamedCallbackParam="/mk attack3 &lt;attack3&gt;" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="NamedCallback" Asynchronous="False">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="4" ListVariableName="stone_list" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="ListVariable">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="5" VariableName="stone_list_size" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="6" NamedCallbackName="command" NamedCallbackParam="/e test!" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="NamedCallback">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+        </Actions>
+        <Condition Enabled="false" Grouping="Or" />
+      </Trigger>
+      <Trigger Enabled="true" Name="石牢点名标记123" Id="989c5554-d5d1-46da-8e0d-14b4483a3864" RegularExpression="^.*?ActionEffect.*?:.{8}:泰坦:(2B6B|2B6C):花岗岩牢狱:.{8}:(?&lt;stone_name&gt;.*?):">
+        <Actions>
+          <Action OrderNumber="1" ListVariableOp="Push" ListVariableName="stone_list" ListVariableExpression="${stone_name}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="ListVariable">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="2" VariableOp="SetNumeric" VariableName="stone_list_size" VariableExpression="${lvar:stone_list.size}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="3" ListVariableOp="SortFfxivPartyAsc" ListVariableName="stone_list" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="ListVariable">
+            <Condition Enabled="true" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="${var:stone_list_size}" ExpressionTypeL="Numeric" ExpressionR="2" ExpressionTypeR="Numeric" ConditionType="NumericGreaterEqual" />
+            </Condition>
+          </Action>
+          <Action OrderNumber="4" NamedCallbackName="mark" NamedCallbackParam="{Name:&quot;${lvar:stone_list[1]}&quot;,MarkType:&quot;attack1&quot;}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="NamedCallback" ExecutionDelayExpression="50">
+            <Condition Enabled="true" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="${var:stone_list_size}" ExpressionTypeL="Numeric" ExpressionR="3" ExpressionTypeR="Numeric" ConditionType="NumericGreaterEqual" />
+            </Condition>
+          </Action>
+          <Action OrderNumber="5" NamedCallbackName="mark" NamedCallbackParam="{Name:&quot;${lvar:stone_list[2]}&quot;,MarkType:&quot;attack2&quot;}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="NamedCallback" ExecutionDelayExpression="50">
+            <Condition Enabled="true" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="${var:stone_list_size}" ExpressionTypeL="Numeric" ExpressionR="3" ExpressionTypeR="Numeric" ConditionType="NumericGreaterEqual" />
+            </Condition>
+          </Action>
+          <Action OrderNumber="6" NamedCallbackName="mark" NamedCallbackParam="{Name:&quot;${lvar:stone_list[3]}&quot;,MarkType:&quot;attack3&quot;}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="NamedCallback" ExecutionDelayExpression="50">
+            <Condition Enabled="true" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="${var:stone_list_size}" ExpressionTypeL="Numeric" ExpressionR="3" ExpressionTypeR="Numeric" ConditionType="NumericGreaterEqual" />
+            </Condition>
+          </Action>
+        </Actions>
+        <Condition Enabled="false" Grouping="Or" />
+      </Trigger>
+      <Trigger Enabled="false" Name="团灭取消标记销毁变量" Id="6f4b8b83-78b9-43ac-97dc-65b285d88e02" RegularExpression="^.{15}ChatLog 00:.{4}::战斗开始！">
+        <Actions>
+          <Action OrderNumber="1" JsonEndpointExpression="http://127.0.0.1:${var:鲶鱼精邮差端口}/command" JsonPayloadExpression="/mk attack1 &lt;attack1&gt;" NamedCallbackName="command" NamedCallbackParam="/mk clear &lt;attack1&gt;" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="NamedCallback" ExecutionDelayExpression="2300" Asynchronous="False">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="2" JsonEndpointExpression="http://127.0.0.1:${var:鲶鱼精邮差端口}/command" JsonPayloadExpression="/mk attack1 &lt;attack1&gt;" NamedCallbackName="command" NamedCallbackParam="/mk clear &lt;attack2&gt;" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="NamedCallback" Asynchronous="False">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="3" JsonEndpointExpression="http://127.0.0.1:${var:鲶鱼精邮差端口}/command" JsonPayloadExpression="/mk attack1 &lt;attack1&gt;" NamedCallbackName="command" NamedCallbackParam="/mk clear &lt;attack3&gt;" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="NamedCallback" Asynchronous="False">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="4" ListVariableName="stone_list" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="ListVariable">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="5" VariableName="stone_list_size" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="6" NamedCallbackName="command" NamedCallbackParam="/e test!" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="NamedCallback">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+        </Actions>
+        <Condition Enabled="false" Grouping="Or" />
+      </Trigger>
+    </Triggers>
+  </ExportedFolder>
+</TriggernometryExport>
