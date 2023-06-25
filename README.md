@@ -1,3 +1,3 @@
-# ZerglingCN.github.io
+# xelnagazergling.github.io
 试图建设自己的博客。
 学习中……
