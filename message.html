@@ -115,6 +115,16 @@ input[type=reset]:hover {
   background-color: #768250;
 }
 
+textarea {
+  width: 100%;
+  padding: 12px 30px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
 .message {
   border-radius: 5px;
   background-color: #f2f2f2;
@@ -137,8 +147,8 @@ input[type=reset]:hover {
       <label for="fname">昵称</label>
       <input type="text" id="fname" name="昵称" placeholder="请输入你的昵称">
   
-      <label for="lname">内容</label>
-      <input type="text" id="lname" name="内容" placeholder="请输入你的留言内容" >
+      <label for="linme">留言内容</label>
+      <textarea class="message-textare" rows="5" id="linme" placeholder="请输入留言内容"></textarea>
 
       <input type="submit" value="提交">
       <input type="reset" value="重置">
