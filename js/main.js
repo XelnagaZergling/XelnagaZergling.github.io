@@ -23,36 +23,6 @@ document.addEventListener('contextmenu', function(event) {
     }
 });
 
-// 阻止复制操作
-document.addEventListener('copy', function(event) {
-    event.preventDefault();
-    
-    // 创建一个提示文本元素
-    var tooltip = document.createElement('div');
-    tooltip.textContent = '不可复制！';
-    
-    // 设置提示文本的样式
-    tooltip.style.position = 'fixed';
-    tooltip.style.top = '50%';
-    tooltip.style.left = '50%';
-    tooltip.style.transform = 'translate(-50%, -50%)';
-    tooltip.style.backgroundColor = 'black';
-    tooltip.style.color = 'white';
-    tooltip.style.padding = '10px';
-    tooltip.style.borderRadius = '5px';
-    tooltip.style.zIndex = '9999'; // 确保在顶层显示
-    tooltip.style.pointerEvents = 'none'; // 防止干扰用户操作
-    
-    // 将提示文本添加到文档中
-    document.body.appendChild(tooltip);
-    
-    // 设置定时器，在一定时间后移除提示文本
-    setTimeout(function() {
-        document.body.removeChild(tooltip);
-    }, 2000); // 2秒后移除提示文本
-});
-
-
 // 生成随机颜色
 function getRandomColor() {
     var letters = '0123456789ABCDEF';
@@ -67,6 +37,11 @@ function getRandomColor() {
 document.addEventListener('click', function(event) {
     // 检查是否是左键点击（左键的事件代码为1）
     if (event.button === 0) {
+        // 检查事件目标是否是 <a> 标签或图片
+        if (event.target.tagName.toLowerCase() === 'a' || event.target.tagName.toLowerCase() === 'img') {
+            return; // 如果是 <a> 标签或图片，则不执行后续操作
+        }
+        
         // 创建一个提示文本元素
         var tooltip = document.createElement('div');
         

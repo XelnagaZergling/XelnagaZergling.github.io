@@ -67,6 +67,11 @@ function getRandomColor() {
 document.addEventListener('click', function(event) {
     // 检查是否是左键点击（左键的事件代码为1）
     if (event.button === 0) {
+        // 检查事件目标是否是 <a> 标签或图片
+        if (event.target.tagName.toLowerCase() === 'a' || event.target.tagName.toLowerCase() === 'img') {
+            return; // 如果是 <a> 标签或图片，则不执行后续操作
+        }
+        
         // 创建一个提示文本元素
         var tooltip = document.createElement('div');
         
