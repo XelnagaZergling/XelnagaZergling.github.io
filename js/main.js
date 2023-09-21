@@ -85,7 +85,7 @@ document.addEventListener('click', function(event) {
             tooltipText = '功德+5!! *直暴*';
             fontSize = '15px'; // 修改字体大小为15px
         } else if (randomNumber < 0.45) {
-            tooltipText = '功德+10!!! *大技能直暴*';
+            tooltipText = '功德+10!! *大技能直暴*';
             fontSize = '18px'; // 修改字体大小为15px
         } else {
             tooltipText = '功德+1'; // 默认情况，字体大小已设置为10px
