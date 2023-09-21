@@ -15,6 +15,14 @@ function enableTextSelection() {
 }
 // 调用禁止文字选中函数
 disableTextSelection();
+
+document.addEventListener('contextmenu', function(event) {
+    // 检查事件目标是否是图片元素
+    if (event.target.tagName === 'IMG') {
+        event.preventDefault(); // 阻止右键菜单的默认行为
+    }
+});
+
 // 阻止复制操作
 document.addEventListener('copy', function(event) {
     event.preventDefault();
@@ -55,11 +63,6 @@ function getRandomColor() {
     return color;
 }
 
-// 生成随机大小
-function getRandomSize(minSize, maxSize) {
-    return Math.floor(Math.random() * (maxSize - minSize + 1)) + minSize;
-}
-
 // 添加点击事件监听器
 document.addEventListener('click', function(event) {
     // 检查是否是左键点击（左键的事件代码为1）
@@ -67,18 +70,22 @@ document.addEventListener('click', function(event) {
         // 创建一个提示文本元素
         var tooltip = document.createElement('div');
         
-        // 根据不同的几率生成不同的文本
+        // 根据不同的几率生成不同的文本和字体大小
         var randomNumber = Math.random();
         var tooltipText = '';
+        var fontSize = '10px'; // 默认字体大小
         
         if (randomNumber < 0.20) {
             tooltipText = '功德+2 *直*';
+            fontSize = '13px'; // 修改字体大小为12px
         } else if (randomNumber < 0.40) {
             tooltipText = '功德+3! *暴*';
+            fontSize = '13px'; // 修改字体大小为12px
         } else if (randomNumber < 0.44) {
             tooltipText = '功德+5!! *直暴*';
+            fontSize = '16px'; // 修改字体大小为15px
         } else {
-            tooltipText = '功德+1'; // 默认情况
+            tooltipText = '功德+1'; // 默认情况，字体大小已设置为10px
         }
         
         tooltip.textContent = tooltipText;
@@ -87,9 +94,8 @@ document.addEventListener('click', function(event) {
         var randomColor = getRandomColor();
         tooltip.style.color = randomColor;
         
-        // 设置随机字体大小（范围从10px到15px）
-        var randomSize = getRandomSize(10, 15);
-        tooltip.style.fontSize = randomSize + 'px';
+        // 设置字体大小
+        tooltip.style.fontSize = fontSize;
         
         // 设置提示文本的样式
         tooltip.style.position = 'fixed';
