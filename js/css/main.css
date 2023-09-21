@@ -1,0 +1,326 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+header.index .modeToggle {
+    background: linear-gradient(to right, orange, purple);
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    cursor: pointer;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+header.index {
+    background-image: url('../images/Backgroundimage.png');
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    padding: 430px 0;
+}
+header.index h1 {
+    font-size: 36px;
+    margin: 0;
+    color: #ffffff;
+    background-color: rgba(0, 0, 0, 0.6);
+    max-width: 30%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+header.index p {
+    color: #ffffff;
+    background-color: rgba(0, 0, 0, 0.6);
+    max-width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+header.class1 {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+}
+
+header.class1 h1 {
+    font-size: 32px;
+    font-weight: bold;
+    margin: 0;
+}
+  
+
+nav.class2 {
+    margin-top: 10px;
+}
+
+nav.class2 ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav.class2 li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+nav.class2 li:last-child {
+    margin-right: 0;
+}
+
+nav.class2 a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+nav.index {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+nav.index ul {
+    list-style-type: none;
+    padding: 0;
+}
+nav.index ul li {
+    display: inline;
+    margin: 0 20px;
+}
+nav.index ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+.rounded-button {
+    background-color: #fff; /* 将矩形的背景颜色改为白色 */
+    color: #000; /* 将文字颜色改为黑色 */
+    border: none;
+    border-radius: 20px; /* 圆角半径，根据需要调整 */
+    padding: 10px 20px; /* 按钮内边距，根据需要调整 */
+    cursor: pointer;
+}
+.content1 {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    line-height: 1.6;
+}
+.content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    line-height: 1.6;
+}
+.content a {
+    text-decoration: none;
+    color: #333
+}
+.content a:visited {
+    color: #333
+}
+.content a:hover {
+    text-decoration: underline;
+}
+.content1 a {
+    text-decoration: none;
+    color: #333;
+    display: inline-block;
+    padding: 10px 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f7f7f7;
+    transition: background-color 0.3s ease;
+    margin-bottom: 10px;
+}
+.content2 {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+.content2 h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0 0 10px 0;
+    text-align: center;
+}
+
+.content2 h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0 0 10px 0;
+    text-align: center;
+}
+
+.content2 a {
+    text-decoration: none;
+    color: #333
+}
+.content2 a:visited {
+    color: #333
+}
+.content2 a:hover {
+    text-decoration: underline;
+}
+.content h2 {
+    font-size: 24px;
+    color: #333;
+}
+.comment {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+.avatar {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px; 
+}
+.avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
+.comment p {
+    margin: 0;
+    padding: 0;
+}
+.comment strong {
+    color: #007bff;
+    font-weight: bold;
+}
+.comment p:last-child {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #333;
+}
+
+.read-more {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #fff;
+    color: #333;
+    text-decoration: none;
+    border-radius: 5px;
+    border: 2px solid #ccc;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.read-more:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+#scrollTopBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 80px;
+    font-size: 24px;
+    background: linear-gradient(45deg, #007bff, #007bff);
+    color: #ffcc00;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    padding: 10px;
+    opacity: 0.7;
+}
+
+#scrollTopBtn:hover {
+    opacity: 1;
+}
+
+.text0 {
+    margin:35px 35px 35px 35px;
+    background-color: #f5f5f5;
+    padding: 20px;
+    border: 0px solid #ccc;
+    max-width: 900px;
+    margin: 20px auto;
+}
+
+.text0 h1 {
+    font-size: 32px;
+    font-weight: bold;
+    margin: 0 0 10px 0;
+    text-align: center;
+}
+
+.text0 h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0 0 10px 0;
+}
+
+.text0 p {
+    max-width: 900px;
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+.text0 a {
+    text-decoration: none;
+    color: #333
+}
+.text0 a:visited {
+    color: #333
+}
+.text0 a:hover {
+    text-decoration: underline;
+}
+#progress-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 30px;
+    height: 200px;
+    background-color: rgba(204, 204, 204, 0.7); /* 半透明背景色 */
+    border: 1px solid #000;
+    display: flex;
+    flex-direction: column-reverse;
+    border-radius: 15px; /* 圆角 */
+}
+
+#progress-bar {
+    width: 100%;
+    height: 0;
+    background-color: #007bff;
+    transition: height 0.2s ease;
+    position: relative;
+    border-radius: 15px; /* 圆角 */
+}
+
+#progress-text {
+    text-align: center;
+    position: absolute;
+    color: cyan;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    margin-bottom: 5px;
+}
+
+footer {
+    max-width: 100%;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+footer p {
+    font-size: 14px;
+    margin: 0;
+}
