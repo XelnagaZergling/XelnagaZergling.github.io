@@ -5,12 +5,12 @@ body {
     margin: 0;
     padding: 0;
 }
-#modeToggle {
-    background: linear-gradient(to right, orange, purple); /* 左边是橙色，右边是紫色的渐变背景 */
-    color: white; /* 文本颜色为白色 */
+nav.index .modeToggle {
+    background: linear-gradient(to right, orange, purple);
+    color: white;
     border: none;
-    border-radius: 20px; /* 圆角半径，根据需要调整 */
-    padding: 10px 20px; /* 按钮内边距，根据需要调整 */
+    border-radius: 20px;
+    padding: 10px 20px;
     cursor: pointer;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
 }
