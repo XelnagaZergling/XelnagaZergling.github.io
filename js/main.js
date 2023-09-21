@@ -77,13 +77,16 @@ document.addEventListener('click', function(event) {
         
         if (randomNumber < 0.20) {
             tooltipText = '功德+2 *直*';
-            fontSize = '13px'; // 修改字体大小为12px
+            fontSize = '12px'; // 修改字体大小为12px
         } else if (randomNumber < 0.40) {
             tooltipText = '功德+3! *暴*';
-            fontSize = '13px'; // 修改字体大小为12px
+            fontSize = '12px'; // 修改字体大小为12px
         } else if (randomNumber < 0.44) {
             tooltipText = '功德+5!! *直暴*';
-            fontSize = '16px'; // 修改字体大小为15px
+            fontSize = '15px'; // 修改字体大小为15px
+        } else if (randomNumber < 0.45) {
+            tooltipText = '功德+10!!! *大技能直暴*';
+            fontSize = '18px'; // 修改字体大小为15px
         } else {
             tooltipText = '功德+1'; // 默认情况，字体大小已设置为10px
         }
