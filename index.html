@@ -6,19 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>分裂池</title>
     <link rel="shortcut icon" href="./images/favicon.ico">
-    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" href="css/main.css" id="day-mode-style">
+    <link rel="stylesheet" href="css/main-night.css" id="night-mode-style" disabled>
 </head>
-<body>
-    <script src="js/main.js"></script>
-    <header>
+<body> 
+    <header class="index">
         <h1>分裂池</h1>
         <p>欢迎来到Xel'naga Zergling的个人博客！<br>请用PC端浏览以获得更好的体验。<br>上次更新:2023年9月21日</p>
     </header>
-    <nav>
+    <nav class="index">
         <ul>
+            <li><button id="modeToggle">模式切换</li>
             <li><a href="article.html">文章</a></li>
             <li><a href="tools.html">工具</a></li>
-            <li><a href="about.html">关于我</a></li>
+            <li><a href="about.html">关于</a></li>
         </ul>
     </nav>
     <main>
@@ -72,7 +73,9 @@
         </div>
     </main>
     <footer>
-        <p>©2023 分裂池 XelnagaZergling的个人博客</p>
+        <p>© 2022-<span id="currentYear">今年</span> 分裂池 XelnagaZergling的个人博客</p>
     </footer>
+    <script src="js/index.js"></script>
+    <script src="js/toggleMode.js"></script>
 </body>
 </html>

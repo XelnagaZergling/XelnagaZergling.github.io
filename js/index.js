@@ -142,19 +142,3 @@ document.addEventListener("DOMContentLoaded", function() {
         spanElement.textContent = currentYear;
     }
 });
-// 获取按钮元素
-const modeToggleBtn = document.getElementById("modeToggle");
-// 获取白天和夜间模式的样式表
-const dayModeStyle = document.getElementById("day-mode-style");
-const nightModeStyle = document.getElementById("night-mode-style");
-// 获取用户的模式首选项
-function getModePreference() {
-    return localStorage.getItem('modePreference');
-}
-// 在页面加载时应用用户的首选模式
-const userModePreference = getModePreference();
-if (userModePreference === 'night') {
-    nightModeStyle.disabled = false; // 启用夜间模式样式表
-} else {
-    dayModeStyle.disabled = false; // 启用白天模式样式表
-}

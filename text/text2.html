@@ -6,19 +6,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>分裂池</title>
   <link rel="shortcut icon" href="../images/favicon.ico">
-  <link rel="stylesheet" type="text/css" href="../css/class2.css">
+  <link rel="stylesheet" href="../css/main.css" id="day-mode-style">
+  <link rel="stylesheet" href="../css/main-night.css" id="night-mode-style" disabled>
   </style>
 </head>
 <body>
-  <script src="../js/main.js"></script>
-  <script src="../js/progress-bar.js"></script>
   <div id="progress-container">
     <div id="progress-bar"></div>
     <div id="progress-text"></div>
   </div>
-  <header>
-    <h1>分裂池</h1>
-    <nav>
+  <header class="class1">
+    <h1>分裂池 - 文章</h1>
+    <nav class="class2">
       <ul>
         <li><a href="../index.html">返回首页</a></li>
         <li><a href="../article.html">全部文章</a></li>
@@ -336,7 +335,7 @@
 
       <h2>StatusList 26 状态列表</h2>
       <p>
-        StatusList 26:1034A2D7:Xel'naga Zergling:005A5A15:118660:118660:10000:10000:61::99.69:114.93:0.00:-3.<br>00:0:0:0:294E0030:44DCB18F:1034A2D7:5B:0:1034A2D7:9E:41486E98:1028C689:04C2:4123CEEC:1028C689:0A96:40BCFDF8:10282A35:1E0032:4187167B:1034A2D7:0129:41DAFFF5:10282A35:077E:41DAFFF5:10282A35:04A7:4191665F:1034A2D7:640059:415EE564:1034A2D7:0390:415EE564:1034A2D7:01900A76:40FE978D:1034A2D7:0A77:407D2F1B:1034A2D7:0A78:419FA5E3:1034A2D7<br>
+        StatusList 26:1034A2D7:Xel'naga Zergling:005A5A15:118660:118660:10000:10000:61::99.69:114.93:0.00:-3.<br>
         StatusList 26:400008ED:フェアリー・エオス:005A5A00:64649:64649:10000:10000:0::99.75:114.37:0.00:0.42:0:0:0:294E0030:4513CB46:10282A35:29590031:41DF438D:10282A35:08A8:40A00000:10194CB2<br>
       </p>
       <p>
@@ -355,7 +354,9 @@
     </div>
   </main>
   <footer>
-    <p>©2023 分裂池 XelnagaZergling的个人博客</p>
+    <p>© 2022-<span id="currentYear">今年</span> 分裂池 XelnagaZergling的个人博客</p>
   </footer>
+  <script src="../js/main.js"></script>
+  <script src="../js/progress-bar.js"></script>
 </body>
 </html>
