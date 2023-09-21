@@ -66,7 +66,22 @@ document.addEventListener('click', function(event) {
     if (event.button === 0) {
         // 创建一个提示文本元素
         var tooltip = document.createElement('div');
-        tooltip.textContent = '功德+1';
+        
+        // 根据不同的几率生成不同的文本
+        var randomNumber = Math.random();
+        var tooltipText = '';
+        
+        if (randomNumber < 0.20) {
+            tooltipText = '功德+2 *直*';
+        } else if (randomNumber < 0.40) {
+            tooltipText = '功德+3! *暴*';
+        } else if (randomNumber < 0.44) {
+            tooltipText = '功德+5!! *直暴*';
+        } else {
+            tooltipText = '功德+1'; // 默认情况
+        }
+        
+        tooltip.textContent = tooltipText;
         
         // 设置随机颜色
         var randomColor = getRandomColor();
