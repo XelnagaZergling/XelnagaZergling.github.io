@@ -2,8 +2,10 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>404 - Page Not Found</title>
+    <link rel="shortcut icon" href="./images/favicon.ico">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -53,27 +55,19 @@
     <div lang="ru" style="display:none;">
         <p>Извините, страница, которую вы ищете, не существует или была перемещена.</p>
         <p>Пожалуйста, проверьте введенный вами URL-адрес или вернитесь на <a href="/">главную страницу</a>.</p>
-    </div>    
-    <script>
-        // 获取用户的浏览器语言
-        var userLanguage = window.navigator.language;
-    
-        // 根据用户语言设置显示对应的div
-        if (userLanguage === 'ja') {
-            document.querySelector('div[lang="ja"]').style.display = 'block';
-        } else if (userLanguage === 'zh-CN') {
-            document.querySelector('div[lang="zh-CN"]').style.display = 'block';
-        } else if (userLanguage === 'zh-TW') {
-            document.querySelector('div[lang="zh-TW"]').style.display = 'block';
-        } else if (userLanguage === 'fr') {
-            document.querySelector('div[lang="fr"]').style.display = 'block';
-        } else if (userLanguage === 'ru') {
-            document.querySelector('div[lang="ru"]').style.display = 'block';
-        } else {
-            // 默认显示英文
-            document.querySelector('div[lang="en"]').style.display = 'block';
-        }
-    </script>
-    
+    </div>
+    <div lang="es" style="display:none;">
+        <p>Lo siento, la página que buscas no existe o ha sido movida.</p>
+        <p>Por favor, verifica la URL que ingresaste o regresa a la <a href="/">página de inicio</a>.</p>
+    </div>
+    <div lang="ar" style="display:none;">
+        <p>عذرًا، الصفحة التي تبحث عنها غير موجودة أو تم نقلها.</p>
+        <p>يرجى التحقق من العنوان الذي أدخلته أو العودة إلى <a href="/">الصفحة الرئيسية</a>.</p>
+    </div>
+    <div lang="de" style="display:none;">
+        <p>Entschuldigung, die von Ihnen gesuchte Seite existiert nicht oder wurde verschoben.</p>
+        <p>Bitte überprüfen Sie die von Ihnen eingegebene URL oder kehren Sie zur <a href="/">Startseite</a> zurück.</p>
+    </div>
+    <script src="js/404.js"></script>
 </body>
 </html>
