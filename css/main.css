@@ -54,7 +54,12 @@ header.class1 h1 {
     font-weight: bold;
     margin: 0;
 }
-  
+#currentTime {
+    font-size: 18px;
+    color: #007bff;
+    font-weight: bold;
+    margin-left: 10px;
+}
 
 nav.class2 {
     margin-top: 10px;
