@@ -148,3 +148,24 @@ document.addEventListener("DOMContentLoaded", function() {
         spanElement.textContent = currentYear;
     }
 });
+
+// 获取显示时间的元素
+var currentTimeElement = document.getElementById("currentTime");
+
+// 更新时间的函数
+function updateTime() {
+    var now = new Date();
+    var hours = now.getHours();
+    var minutes = now.getMinutes();
+    var seconds = now.getSeconds();
+    var formattedTime = hours + ":" + (minutes < 10 ? "0" : "") + minutes + ":" + (seconds < 10 ? "0" : "") + seconds;
+    
+    // 将时间显示在元素中
+    currentTimeElement.textContent = "本地时间: " + formattedTime;
+}
+
+// 每秒更新一次时间
+setInterval(updateTime, 1000);
+
+// 初始加载时间
+updateTime();
