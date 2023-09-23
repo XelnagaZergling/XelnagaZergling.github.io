@@ -37,10 +37,13 @@ function getRandomColor() {
 document.addEventListener('click', function(event) {
     // 检查是否是左键点击（左键的事件代码为1）
     if (event.button === 0) {
-        // 检查事件目标是否是 <a> 标签、图片或 <button> 元素
+        // 检查事件目标是否是 <a> 标签、图片、<button> 元素、文本框、输入框或选择框
         var tagName = event.target.tagName.toLowerCase();
-        if (tagName === 'a' || tagName === 'img' || tagName === 'button') {
-            return; // 如果是 <a> 标签、图片或 <button> 元素，则不执行后续操作
+        var isExcluded = tagName === 'a' || tagName === 'img' || tagName === 'button' ||
+                         event.target.type === 'text' || event.target.type === 'number' ||
+                         event.target.tagName.toLowerCase() === 'select' || event.target.tagName.toLowerCase() === 'input';
+        if (isExcluded) {
+            return; // 如果是排除的元素，则不执行后续操作
         }
         
         // 创建一个提示文本元素
