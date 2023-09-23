@@ -313,6 +313,82 @@ nav.index ul li a {
     margin-bottom: 5px;
 }
 
+.tool {
+    margin:35px 35px 35px 35px;
+    background-color: #f5f5f5;
+    padding: 20px;
+    border: 0px solid #ccc;
+    max-width: 900px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.page-title {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.input-label {
+    display: inline-block;
+    width: 150px;
+    text-align: right;
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+.input-field {
+    margin: 5px;
+    padding: 8px;
+    border: 1px solid #333;
+    font-size: 16px;
+    width: 200px;
+}
+
+.action-button {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.action-button:hover {
+    background-color: #0056b3;
+}
+
+.result-text {
+    font-size: 20px;
+    color: #333;
+    margin-top: 10px;
+}
+
+.note-text {
+    color: #666;
+    font-style: italic;
+    font-size: 14px;
+    margin-top: 10px;
+}
+#password {
+    font-size: 20px;
+    color: #333;
+    border: 1px solid #ccc;
+    padding: 10px;
+    display: inline-block;
+    margin-top: 10px;
+    min-width: 150px;
+    background-color: #fff;
+}
+
+select {
+    padding: 8px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+}
+
 footer {
     max-width: 100%;
     background-color: #333;

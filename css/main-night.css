@@ -291,7 +291,7 @@ nav.index ul li a {
     background-color: #007bff;
     transition: height 0.2s ease;
     position: relative;
-    border-radius: 15px; /* 圆角 */
+    border-radius: 15px;
 }
 
 #progress-text {
@@ -303,6 +303,83 @@ nav.index ul li a {
     right: 0;
     margin: auto;
     margin-bottom: 5px;
+}
+
+.tool {
+    margin:35px 35px 35px 35px;
+    background-color: #2c2c2c;
+    padding: 20px;
+    border: 0px solid #3c3c3c;
+    max-width: 900px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.page-title {
+    font-size: 24px;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.input-label {
+    display: inline-block;
+    width: 150px;
+    text-align: right;
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+.input-field {
+    margin: 5px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    font-size: 16px;
+    width: 200px;
+}
+
+.action-button {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.action-button:hover {
+    background-color: #0056b3;
+}
+
+.result-text {
+    font-size: 20px;
+    color: #fff;
+    margin-top: 10px;
+}
+
+.note-text {
+    color: #ccc;
+    font-style: italic;
+    font-size: 14px;
+    margin-top: 10px;
+}
+#password {
+    font-size: 20px;
+    color: #333;
+    border: 1px solid #ccc;
+    padding: 10px;
+    display: inline-block;
+    margin-top: 10px;
+    min-width: 150px;
+    background-color: #fff;
+}
+
+select {
+    padding: 8px;
+    border: 1px solid #ccc;
+    background-color: #fff;
 }
 
 footer {
