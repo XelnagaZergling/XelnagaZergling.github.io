@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>分裂池</title>
+    <link rel="shortcut icon" href="../images/favicon.ico">
+    <link rel="stylesheet" href="../css/main.css" id="day-mode-style">
+    <link rel="stylesheet" href="../css/main-night.css" id="night-mode-style" disabled>
+</head>
+<body>
+    <header class="class1">
+        <h1>分裂池 - 工具</h1>
+        <nav class="class2">
+          <ul>
+            <li><a href="../index.html">返回首页</a></li>
+            <li><a href="../tools.html">全部工具</a></li>
+          </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="tool">
+            <h1>占星术士<br>奥秘卡占卜 三位一体</h1>
+            <p class="note-text">
+                三位一体”是使用3张大奥秘卡的简易占卜法。
+                <br>
+                首先将6张大奥秘卡进行打乱，牌面朝下抽出1张放在自己面前。然后抽出第二张放在第一张的左侧。再抽出第三张放在第一张的右侧比其他两张稍微高一点的位置。
+                <br>
+                这三张奥秘卡，左侧象征着过去，中间象征的现在，右侧象征着未来。此时翻开牌面，正位（即图案上下不颠倒）的牌面象征着其所对应六属性中拥有“星极”神力的十二神，而逆位（即图案上下颠倒）的牌面则象征着所对应六属性中拥有“灵极”神力的十二神。
+                <br>
+                (但实际抽卡是竖着排的，因为放不下了，请假装是横排的)
+            </p>
+            <p class="note-text">注：《艾欧泽亚百科全书》并没有写所有卡片的意义，大部分都是我自己脑补的。<br></p>
+            <button onclick="drawCards()" class="action-button">开始奥秘卡占卜，点击抽三张卡</button>
+            <div id="cardContainer">
+            </div>
+        </div>
+    </main>
+    <script src="../js/main.js"></script>
+    <script src="../js/unitConverter.js"></script>
+    <script src="../js/arcanaDivinationTrinity.js"></script>
+</body>
+</html>
+
