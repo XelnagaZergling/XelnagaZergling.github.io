@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>分裂池</title>
+  <link rel="shortcut icon" href="../images/favicon.ico">
+  <link rel="stylesheet" href="../css/main.css" id="day-mode-style">
+  <link rel="stylesheet" href="../css/main-night.css" id="night-mode-style" disabled>
+  </style>
+</head>
+<body>
+  <button id="scrollTopBtn" title="回到顶部">↑</button>
+  <div id="progress-container">
+    <div id="progress-bar"></div>
+    <div id="progress-text"></div>
+  </div>
+  <header class="class1">
+    <h1>分裂池 - 文章</h1>
+    <nav class="class2">
+      <ul>
+        <li><a href="../index.html">返回首页</a></li>
+        <li><a href="../article.html">全部文章</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <div class="text0">
+      <h1>ACT Triggernomety插件 自用触发器合集 说明 使用方法</h1>
+      <p>注意：此文章写于2023年9月22日02点22分，内容可能过时。 <br /><br /><br /> </p>
+      <p>这是我的FF14触发器合集。包含了我从玩FF14开始写过的所有触发器。</p>
+      <h2>如何使用？</h2>
+      <p>
+        1.选择远程触发器，然后点击左上角添加，添加仓库<br>
+        <img src="../images/tool/tool3/tool3-01.png" alt="图01" />
+      </p>
+      <p>
+        2.地址写下面的地址。名字随便起。最后勾选允许触发器操作文件。<br>
+        <img src="../images/tool/tool3/tool3-02.png" alt="图02" />
+      </p>
+      <p>
+        3.点击确定，导入完毕。建议将触发器复制到本地使用，删除远程触发器。<br>
+        <img src="../images/tool/tool3/tool3-03.png" alt="图02" />
+      </p>
+      <p><br></p>
+      <h2>地址</h2>
+      <a id="copyLink1">复制链接</a>
+    </div>
+  </main>
+  <footer>
+    <p>© 2022-<span id="currentYear">今年</span> 分裂池 XelnagaZergling的个人博客</p>
+  </footer>
+  <script src="../js/main.js"></script>
+  <script src="../js/progress-bar.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var linkToCopy1 = "https://raw.githubusercontent.com/XelnagaZergling/XelnagaZergling.github.io/main/game/XelnagaZerglingTrigger.xml";
+        var copyLinkElement1 = document.getElementById('copyLink1');
+        copyLinkElement1.addEventListener('click', function() {
+            copyToClipboard(linkToCopy1);
+        });
+        function copyToClipboard(text) {
+            var textArea = document.createElement("textarea");
+            textArea.value = text;
+            document.body.appendChild(textArea);
+            textArea.select();
+            document.execCommand('copy');
+            document.body.removeChild(textArea);
+            alert("链接已复制到剪贴板: " + text);
+        }
+    });
+  </script>
+</body>
+</html>
