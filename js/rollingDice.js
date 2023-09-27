@@ -21,8 +21,8 @@ function displayRange() {
         return;
     }
 
-    if (modifierValue <= 0) {
-        alert("修正值必须大于0，请重新输入。");
+    if (modifierValue < 0) {
+        alert("修正值必须大于等于0，请重新输入。");
         // 清空输入框
         modifierInput.value = "";
         rangeSpan.textContent = "";
