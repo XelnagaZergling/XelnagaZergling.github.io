@@ -14,8 +14,16 @@ function displayRange() {
     if (numOfSides <= 0 || numOfDice <= 0) {
         alert("骰子的面数和数量必须大于0，请重新输入。");
         // 清空输入框
-        numOfSidesInput.value = "6";
-        numOfDiceInput.value = "1";
+        numOfSidesInput.value = "";
+        numOfDiceInput.value = "";
+        modifierInput.value = "";
+        rangeSpan.textContent = "";
+        return;
+    }
+
+    if (modifierValue <= 0) {
+        alert("修正值必须大于0，请重新输入。");
+        // 清空输入框
         modifierInput.value = "";
         rangeSpan.textContent = "";
         return;
