@@ -109,10 +109,13 @@
     </footer>
     <scrpt>
         console.log("当前页面 URL:", window.location.href);
-        
-        if (window.location.href === "https://blog.xelnagazergling.net") {
-            location.replace("https://blog.xelnagazergling.net/index.html");
-        }        
+        function Redirect() {
+            
+            if (window.location.href === "https://blog.xelnagazergling.net") {
+                location.replace("https://blog.xelnagazergling.net/index.html");
+            }      
+        }
+  
     </scrpt>
     <script src="js/index.js"></script>
     <script src="js/toggleMode.js"></script>
