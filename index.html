@@ -12,7 +12,7 @@
 <body> 
     <header class="index">
         <h1>分裂池</h1>
-        <p>欢迎来到Xel'naga Zergling的个人博客！<br>请用PC端浏览以获得更好的体验。<br>上次更新:2023年12月4日<br></p>
+        <p>欢迎来到Xel'naga Zergling的个人博客！<br>请用PC端浏览以获得更好的体验。（因为没做手机端）<br>上次更新:2023年12月4日<br></p>
         <span id="currentTime"></span><br>
         <button class="modeToggle" id="modeToggle">白天/夜间模式切换
     </header>
@@ -22,6 +22,7 @@
             <li><a href="article.html">文章</a></li>
             <li><a href="videos.html">视频</a></li>
             <li><a href="tools.html">工具</a></li>
+            <li><a href="essay.html">随笔</a></li>
             <li><a href="about.html">关于</a></li>
         </ul>
     </nav>
@@ -60,6 +61,26 @@
         </div>
         <div class="content">
             <h2>留言</h2>
+            <div id="disqus_thread"></div>
+            <script>
+                /**
+                *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+                /*
+                var disqus_config = function () {
+                this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+                this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                };
+                */
+                (function() { // DON'T EDIT BELOW THIS LINE
+                var d = document, s = d.createElement('script');
+                s.src = 'https://xelnagazergling-1.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+                })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+            <p>————————————————————————————————————————————————</p>
             <div class="comment">
                 <div class="avatar">
                     <img src="./images/woodenfish.gif" alt="电子木鱼的头像" width="50" height="50">
@@ -85,5 +106,6 @@
     </footer>
     <script src="js/index.js"></script>
     <script src="js/toggleMode.js"></script>
+    <script id="dsq-count-scr" src="//xelnagazergling-1.disqus.com/count.js" async></script>
 </body>
 </html>
