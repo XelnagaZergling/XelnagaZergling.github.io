@@ -12,7 +12,7 @@
 <body> 
     <header class="index">
         <h1>分裂池</h1>
-        <p>欢迎来到Xel'naga Zergling的个人博客！<br>请用PC端浏览以获得更好的体验。（因为没做手机端）<br>上次更新:2023年12月4日<br></p>
+        <p>欢迎来到Xel'naga Zergling的个人博客！<br>请用PC端浏览以获得更好的体验。（因为没做手机端）<br>上次更新:2023年12月29日<br></p>
         <span id="currentTime"></span><br>
         <button class="modeToggle" id="modeToggle">白天/夜间模式切换
     </header>
@@ -61,26 +61,6 @@
         </div>
         <div class="content">
             <h2>留言</h2>
-            <div id="disqus_thread"></div>
-            <script>
-                /**
-                *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-                *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
-                /*
-                var disqus_config = function () {
-                this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
-                this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-                };
-                */
-                (function() { // DON'T EDIT BELOW THIS LINE
-                var d = document, s = d.createElement('script');
-                s.src = 'https://xelnagazergling-1.disqus.com/embed.js';
-                s.setAttribute('data-timestamp', +new Date());
-                (d.head || d.body).appendChild(s);
-                })();
-            </script>
-            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-            <p>————————————————————————————————————————————————</p>
             <div class="comment">
                 <div class="avatar">
                     <img src="./images/woodenfish.gif" alt="电子木鱼的头像" width="50" height="50">
@@ -96,8 +76,29 @@
                 </div>
                 <div class="comment-text">
                     <p><strong>Xel'naga Zergling：</strong></p>
-                    <p>hello,world!<br>如果你加载不出来图片，请确认自己是否能访问github。<br>本来想加一个留言功能的，但是这是用github pages实现的，笑死，根本用不了数据库。所以做不成。<br>github pages好就好在它能白嫖，可惜只能做静态网页。先把这个留言留着备用吧，等以后我不用github pages了就可以搞真的了。</p>
+                    <p>hello,world!<br>如果你加载不出来图片，请确认自己是否能访问github。<br>本来想加一个留言功能的，但是这是用github pages实现的，笑死，根本用不了数据库。所以做不成。<br>2023年12月29日更新： 使用Disqus来托管留言功能，快在下方留言试试吧！</p>
                 </div>
+            </div>
+            <p>————————————————————————————————————————————</p>
+            <div id="disqus_thread">
+                <script>
+                    /**
+                    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+                    /*
+                    var disqus_config = function () {
+                    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+                    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                    };
+                    */
+                    (function() { // DON'T EDIT BELOW THIS LINE
+                    var d = document, s = d.createElement('script');
+                    s.src = 'https://xelnagazergling-1.disqus.com/embed.js';
+                    s.setAttribute('data-timestamp', +new Date());
+                    (d.head || d.body).appendChild(s);
+                    })();
+                </script>
+                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
             </div>
         </div>
     </main>
