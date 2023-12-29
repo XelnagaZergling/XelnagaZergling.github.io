@@ -8,11 +8,6 @@
     <link rel="shortcut icon" href="./images/favicon.ico">
     <link rel="stylesheet" href="css/main.css" id="day-mode-style">
     <link rel="stylesheet" href="css/main-night.css" id="night-mode-style" disabled>
-    <scrpt>
-        if (window.location.href === "https://blog.xelnagazergling.net") {
-            window.location.href = "https://blog.xelnagazergling.net/index.html";
-        }        
-    </scrpt>
 </head>
 <body> 
     <header class="index">
@@ -112,6 +107,13 @@
     <footer>
         <p>© 2022-<span id="currentYear">今年</span> 分裂池 XelnagaZergling的个人博客</p>
     </footer>
+    <scrpt>
+        console.log("当前页面 URL:", window.location.href);
+        
+        if (window.location.href === "https://blog.xelnagazergling.net") {
+            location.replace("https://blog.xelnagazergling.net/index.html");
+        }        
+    </scrpt>
     <script src="js/index.js"></script>
     <script src="js/toggleMode.js"></script>
     <script id="dsq-count-scr" src="//xelnagazergling-1.disqus.com/count.js" async></script>
