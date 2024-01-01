@@ -8,18 +8,49 @@
     <link rel="shortcut icon" href="./images/favicon.ico">
     <link rel="stylesheet" href="css/main.css" id="day-mode-style">
     <link rel="stylesheet" href="css/main-night.css" id="night-mode-style" disabled>
+    <style>
+        .cookie-banner {
+            display: none;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: #3498db;
+            color: #fff;
+            padding: 15px;
+            text-align: center;
+            box-shadow: 0px -2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .cookie-banner p {
+            margin: 0;
+            display: inline;
+        }
+
+        .cookie-banner button {
+            background-color: #fff;
+            color: #3498db;
+            border: none;
+            padding: 8px 16px;
+            font-size: 14px;
+            cursor: pointer;
+            margin-left: 40px;
+        }
+
+        .cookie-banner button:hover {
+            background-color: #ecf0f1;
+        }
+    </style>
 </head>
 <body> 
     <script>
-        // 判断当前页面的 URL 是否是 https://blog.xelnagazergling.net
         if (window.location.href === "https://blog.xelnagazergling.net/") {
-          // 如果是，通过 window.location.href 进行重定向到 https://blog.xelnagazergling.net/index.html
           window.location.href = "https://blog.xelnagazergling.net/index.html";
         }
       </script>
     <header class="index">
         <h1>分裂池</h1>
-        <p>欢迎来到Xel'naga Zergling的个人博客！<br>请用PC端浏览以获得更好的体验。（因为没做手机端）<br>上次更新:2023年12月29日<br></p>
+        <p>欢迎来到Xel'naga Zergling的个人博客！<br>请用PC端浏览以获得更好的体验。（因为没做手机端）<br>上次更新:2024年1月1日<br></p>
         <span id="currentTime"></span><br>
         <button class="modeToggle" id="modeToggle">白天/夜间模式切换
     </header>
@@ -113,6 +144,20 @@
     <footer>
         <p>© 2022-<span id="currentYear">今年</span> 分裂池 XelnagaZergling的个人博客</p>
     </footer>
+    <div class="cookie-banner" id="cookieBanner">
+        <p>我使用Cookie来改善您在我的网站上的体验。继续浏览即表示您同意我使用Cookie。</p>
+        <button onclick="acceptCookies()">同意</button>
+    </div>
+    <script>
+    if (!localStorage.getItem('cookiesAccepted')) {
+        document.getElementById('cookieBanner').style.display = 'block';
+    }
+
+    function acceptCookies() {
+        localStorage.setItem('cookiesAccepted', 'true');
+        document.getElementById('cookieBanner').style.display = 'none';
+    }
+    </script>
     <script src="js/index.js"></script>
     <script src="js/toggleMode.js"></script>
     <script id="dsq-count-scr" src="//xelnagazergling-1.disqus.com/count.js" async></script>
