@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>分裂池</title>
+    <link rel="shortcut icon" href="../images/favicon.ico">
+    <link rel="stylesheet" href="../css/main.css" id="day-mode-style">
+    <link rel="stylesheet" href="../css/main-night.css" id="night-mode-style" disabled>
+</head>
+<body>
+    <header class="class1">
+        <h1>分裂池 - 工具</h1>
+        <nav class="class2">
+          <ul>
+            <li><a href="../index.html">返回首页</a></li>
+            <li><a href="../myCreations.html">查看全部</a></li>
+          </ul>
+        </nav>
+      </header>
+    <main>
+        <div class="tool">
+            <h1 class="page-title">单位转换器</h1>
+            <label for="value" class="input-label">数值:</label>
+            <input type="number" id="value" step="any" class="input-field">
+            <br>
+            <label for="unit" class="input-label">单位:</label>
+            <select id="unit" class="input-field">
+                <option value="feet">英尺 (ft)</option>
+                <option value="inches">英寸 (in)</option>
+                <option value="pounds">磅 (lb)</option>
+                <option value="gallons">加仑 (gal)</option>
+                <option value="bushels">蒲式耳 (bu)</option>
+                <option value="ounces">盎司 (oz)</option>
+                <option value="fluid_ounces">液盎司 (fl oz)</option>
+                <option value="fahrenheit">华氏度 (°F)</option>
+            </select>
+            <br>
+            <button onclick="convertUnits()" class="action-button">转换</button>
+            <br>
+            <div id="result" class="result-text"></div>
+            <p class="note-text">注：所有英制单位都是美式英制。</p>
+        </div>
+
+    </main>
+    <script src="../js/main.js"></script>
+    <script src="../js/unitConverter.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>分裂池</title>
+    <link rel="shortcut icon" href="../images/favicon.ico">
+    <link rel="stylesheet" href="../css/main.css" id="day-mode-style">
+    <link rel="stylesheet" href="../css/main-night.css" id="night-mode-style" disabled>
+    <style>
+        input[type="number"]::-webkit-inner-spin-button,
+        input[type="number"]::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            appearance: none;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <header class="class1">
+        <h1>分裂池 - 工具</h1>
+        <nav class="class2">
+          <ul>
+            <li><a href="../index.html">返回首页</a></li>
+            <li><a href="../myCreations.html">查看全部</a></li>
+          </ul>
+        </nav>
+      </header>
+    <main>
+        <div class="tool">
+            <h1>骰子模拟器</h1>
+            <label for="numOfSides">骰子面数：</label>
+            <input type="number" id="numOfSides" min="2" value="6" class="input-field">
+            <br>
+            <label for="numOfDice">骰子个数：</label>
+            <input type="number" id="numOfDice" min="1" value="1" class="input-field">
+            <br>
+            <label>修正：</label>
+            <input type="number" id="modifier" placeholder="输入修正值" class="input-field">
+            <label for="add">+</label>
+            <input type="radio" id="add" name="modifierOperation" value="add" checked>
+            <label for="subtract">-</label>
+            <input type="radio" id="subtract" name="modifierOperation" value="subtract">
+            <br>
+            <label>范围(修改任意值后更新)：</label>
+            <span id="range"></span>
+            <br>
+            <button onclick="rollDice()" class="action-button">投骰子</button>
+            <br>
+            <label>结果：</label>
+            <span id="result">等待投掷</span>
+        </div>
+    </main>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/rollingDice.js"></script>
+</body>
+</html>
