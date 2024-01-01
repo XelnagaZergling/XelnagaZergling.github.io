@@ -107,13 +107,13 @@ nav.index ul li a {
     font-weight: bold;
 }
 .content1 {
-    max-width: 800px;
+    max-width: 1000px;
     margin: 0 auto;
     padding: 20px;
     line-height: 1.6;
 }
 .content {
-    max-width: 800px;
+    max-width: 1000px;
     margin: 0 auto;
     padding: 20px;
     line-height: 1.6;
@@ -140,7 +140,7 @@ nav.index ul li a {
     margin-bottom: 10px;
 }
 .content2 {
-    max-width: 800px;
+    max-width: 1000px;
     margin: 0 auto;
     padding: 20px;
     line-height: 1.6;
