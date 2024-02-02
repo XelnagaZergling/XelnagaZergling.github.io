@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>分裂池</title>
+    <link rel="shortcut icon" href="../images/favicon.ico">
+    <link rel="stylesheet" href="../css/main.css" id="day-mode-style">
+    <link rel="stylesheet" href="../css/main-night.css" id="night-mode-style" disabled>
+</head>
+<body>
+    <header class="class1">
+        <h1>分裂池 - 工具</h1>
+        <nav class="class2">
+            <ul>
+                <li><a href="../index.html">返回首页</a></li>
+                <li><a href="../myCreations.html">查看全部</a></li>
+            </ul>
+        </nav>
+      </header>
+      <main>
+        <div class="tool">
+            <h1>随机武器怪物</h1>
+            <label>
+              <input type="checkbox" id="exclude18" /> 排除熔山龙
+            </label>
+            <label>
+              <input type="checkbox" id="exclude69" /> 排除贝希摩斯
+            </label>
+            <label>
+              <input type="checkbox" id="exclude70" /> 排除鹿首精
+            </label>
+            <label>
+              <input type="checkbox" id="exclude71" /> 排除古代鹿首精
+            </label>
+            <br><br>
+            <select id="selectGroup">
+              <option value="firstGroup">随机武器</option>
+              <option value="secondGroup">随机怪物</option>
+              <option value="bothGroups">全部随机</option>
+            </select>
+            <br>
+            <button onclick="generateNumbers()" class="action-button">生成</button>
+            <div id="result"></div>
+        </div>
+      </main>
+      <script src="../js/main.js"></script>
+      <script src="../js/rollWeaponMonsterMHW.js"></script>
+</body>
+</html>
