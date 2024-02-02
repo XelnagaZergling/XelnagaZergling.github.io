@@ -1,14 +1,15 @@
 function generateNumbers() {
     const excludeNumbers = [];
     if (document.getElementById('exclude18').checked) excludeNumbers.push(18);
-    if (document.getElementById('exclude71').checked) excludeNumbers.push(71);
-    if (document.getElementById('exclude70').checked) excludeNumbers.push(70);
+    if (document.getElementById('exclude63').checked) excludeNumbers.push(63);
     if (document.getElementById('exclude69').checked) excludeNumbers.push(69);
+    if (document.getElementById('exclude70').checked) excludeNumbers.push(70);
+    if (document.getElementById('exclude71').checked) excludeNumbers.push(71);
 
     const firstGroupMin = 1;
     const firstGroupMax = 14;
     const secondGroupMin = 1;
-    const secondGroupMax = 72;
+    const secondGroupMax = 71;
 
     const selectedGroup = document.getElementById('selectGroup').value;
 
