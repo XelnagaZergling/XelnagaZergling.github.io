@@ -1,6 +1,7 @@
 function generateNumbers() {
     const excludeNumbers = [];
     if (document.getElementById('exclude18').checked) excludeNumbers.push(18);
+    if (document.getElementById('exclude32').checked) excludeNumbers.push(32);
     if (document.getElementById('exclude63').checked) excludeNumbers.push(63);
     if (document.getElementById('exclude69').checked) excludeNumbers.push(69);
     if (document.getElementById('exclude70').checked) excludeNumbers.push(70);
